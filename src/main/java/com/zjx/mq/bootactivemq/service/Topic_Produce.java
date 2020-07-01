@@ -18,6 +18,7 @@ public class Topic_Produce {
     @Scheduled(fixedDelay = 3000)
     public void produceTopic(){
         jmsMessagingTemplate.convertAndSend(topic,"topic发送消息"+ UUID.randomUUID().toString().substring(6));
+//        jmsMessagingTemplate.convertAndSend("主题或者队列名字",666);
         System.out.println("send topic msg ok");
     }
 }
